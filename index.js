@@ -3,7 +3,7 @@ module.exports = {
     'eslint-config-airbnb-base',
     './eslintRules/react',
     './eslintRules/react-a11y',
-    './eslintRules/react-hooks',
+    './eslintRules/react-hooks'
   ].map(require.resolve),
-  rules: {},
-};
+  rules: {}
+}

@@ -1,5 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-const CtaTop = () => <div>CTA Top</div>;
+const CtaTop = () => <div>CTA Top</div>
 
-export default CtaTop;
+export default CtaTop

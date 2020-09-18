@@ -7,7 +7,10 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-testing-library": "^3.8.0",
     "object.assign": "^4.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,8 +21,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "yarn eslint ./",
-    "lint:fix": "yarn eslint --fix ."
+    "eslint": "eslint --max-warnings 0 src/ test/ --ext .js,.jsx",
+    "eslint:fix": "yarn eslint --fix",
+    "lint": "yarn eslint && yarn format:lint",
+    "lint:fix": "yarn eslint:fix && yarn format",
+    "_format:base": "prettier '*.{js,json}' '{src, test}/**/*.{js,jsx,json,css}'",
+    "format": "yarn _format:base --write",
+    "format:lint": "yarn _format:base --check || { printf '\nRun \"yarn format\" to run Prettier and format the code.\n'; exit 1; }"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +49,7 @@
     "eslint-plugin-eslint-plugin": "^2.3.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.2"
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "2.1.2"
   }
 }
