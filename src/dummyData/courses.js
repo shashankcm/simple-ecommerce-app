@@ -1,3 +1,4 @@
+/*eslint-disable*/
 export const courses = [
   {
     title: "The Alchemy of Automation",
