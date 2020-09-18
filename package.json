@@ -27,7 +27,7 @@
     "eslint:fix": "yarn eslint --fix",
     "lint": "yarn eslint && yarn format:lint",
     "lint:fix": "yarn eslint:fix && yarn format",
-    "_format:base": "prettier '*.{js,json}' '{src, test}/**/*.{js,jsx,json,css}'",
+    "_format:base": "prettier '*.{js,json}' '{src, test}/**/*.{js,jsx,json,scss,css}'",
     "format": "yarn _format:base --write",
     "format:lint": "yarn _format:base --check || { printf '\nRun \"yarn format\" to run Prettier and format the code.\n'; exit 1; }"
   },
