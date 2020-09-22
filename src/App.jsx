@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react'
-import CtaTop from './components/ctaTop/CtaTop'
+import Landing from './pages/Landing'
 
 function App() {
   useEffect(() => {
     /* eslint-disable-next-line */
     document.title = 'ecommer-app'
   })
-  return <CtaTop />
+  return <Landing />
 }
 
 export default App
